@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PPE Detection</title>
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAC7CAMAAACjH4DlAAABa1BMVEX////ExMT1kgApKSnx2AGPj4/BwcH1jQDzkwCEd3FwaF5vZ1/zkQCMjIwfHx//5xn84sf6y5XCxcgAAAD62bOysrJxcXE9qKXKysrYsYP5+fnSvADw8PCtra2p1dTr6+vh4eHQ0ND9+uhMr6vS6eiWzcs0paLv9/fX19eIipUUFBR/w8EcHBzi4uLizh/Vwkb//vW53dukkILJ5eT/6S/g7+9dXV30hwADnJr58K1oaGgsKzBmt7VUTEa9uLXKwLiLf3n4uXT979zGhzzWs4/y3T779MdNTU2hoaE3Nzf15Wz37Z726YL365HW6dqxnV7FsBavv8FZd3Y0SUuNnJxJd3Gnx8a0p59bT0lTU1O9zc1xqaSbhnj7t2rQwbGclJH3rFewf0b2pzvNu6HChz/1nyfdq3Lhp1z4w4r60qH3sl363r397NPblizUwpWAlZSQn229mkapupb899Pz4FWfx4+Ou3HQzzKLr601N0l0AAAOu0lEQVR4nO2djV/bxhnHTwYkkRiWQLFcxcg2evMQZhaaEidRoOSFQJKuzbq1zZpQmpSttMnaLt3aP393p7c7nYyVFIwk65fPR7bOktF989w9zz0nnQGoVKlSpUqVKlWqVGjJcnJfTj9wKqQYqkXum6o6dDOeO8A6h4u6OCkKU+RlxfFnrLO9nguW/d441h79AevR2llf0wVKNpkitiRNj2dnfRyzs4/P+qJyIEXKhiHQk9kYx+yT87qoi5NiZO0ykKBtEDhKZx+2p0t65j4UDGZpHLPl8i+WoUIchqFlPP7jJI6Px5xg2zYVzmi2/S7GOFkphoRxSH7/IaPe1IQvaIN3yA2q1oMkjgdj/sJQ16muydY9/bxq87slSZKqWBCHgd2uAizNtYDuwI1im5ZpKzLc6MByNR199pfZJI5xrUViSuzc4nChWUiepUqS4WU6YY3FMSb4sJgShw14ciIN4ZDwRs10QoCDVIliMW1ohGKNOk0712Y3N69F2tycvbZzztc4Qbl6rCzH87fvfPLpNUKffnJnkT/vq5yUHNxMAmVoLZ3bG9tya41QS97euN059wudjEjj0DN0cPsHi6vtfhvIfaw2AP326uLt/TGnqYSkvPajjs0U6WMGL3MHM9eXlmTQXVra3kZvmk+X/nr7s78BRzZdoJmmFm5kDbgucACOuFRkhIblv+TVy75HvoO/PfNlE4Amt9Tc2oJvuktP+b8ffPa5a5uuA/DGcU3b32iabMsaCt2w/zJMFOxldGAXIMXTaftQFGlc+NxYv7MDITSb3X4fG0nziy/XG7JpnppWxNGNIcMIOGt4cwFyFcWhChRFGTvSb9zZ+mIbClUfvX6xdaeBvosNtgiZfk+NOm7j1AOLp/4W1HMca+w8R+/7frl5Wj1lPyttljA5jRBs4Xdy/BYKdqUXdk0XqB2IoCc/u379mdyDb4mYVJlGHsgmWuDp6uo+aMG3lPUrrO9Oy7+WqsXA3kN3/8HxPMLRpz8zXcY3FWmA/z7SvnreBbcajQboPG8mPzSZqrI4nBLhsDTQnPebiLw13005wqObx9BTqQLdU8uBQzY17E278/Mf9WS599F8Kg7YGsj6u4n2A9vTO81j5FQa0APPAXGESsehld3FwP/i2MJTcdABVrl6S1qyAj5/yu+8+ACAwYvd3cOvYxxfH+7uvhgA8MGLJb7ZJs9xU3xuGeTYstPkOO7wxhHcEwThm3lC38ACWHx0Y4nj+C5pIXa5wgss0zJduc0hHQrHsOBlvUbjqNVfwuJjAR/DtciTs0/tFUOwB4BOoM3jmr7CZvCdULvXiGk07tXquwAZzQ4+iKd4AKU0QGQ5+M9t+TSWXgk37gJwItRE0jpEUTgB4G6Ig+OpFmJqpRjCmnIUOcp+NSGOmgD70h8EkTAPaByi8APsSQXhMDguEadqruM4FBJYUCybgRFGfME9PsJRv4rsoFarfRvS+BbuCHdRExJeBTj4TuLbCjVHy0hzNTKHGjQViOO+UP8eeloREqjd83HcQ+9F6Ge/rwuvlri05lKYIZzr2HTwaDsO9I6J/GCPI3Bg14IQ1L5t+C0FvsWOpV6LcXTov8MmR3M5R6snMseyrhtmcjQR9hwIB6w6NIQXsLWIIrIPaBsQh/DCN5kIB8el956mlusuQ2fDRpUZW/V5AodYx90ENg/x0jwyDbEmfAc7lLpYux/h4NvMF0Nb9IaqYeTRLAIl0uhIHoOjG1vHh9CJXEGuBTcR8fJl/IIdC3I3MQ6ux/4xZ4gaoabmdlohm7gYxz9hw4Cu5bWAO9P65UsBjtcAXKVxMDkhYA6DbqoITuWU9AMf4/gXxAED0LU6to4QR62+BsCuUBMIHBzzNVY46+AOc57rcHXJ8OwRFxm6Wd7HUTuCZcckjhr2NkeQ1IdLS1x4NNOXqlEv6rFNNEdyPANNjRlG+mR1MFzhWq3Dw2NY+WPoWo7qpHXUj6BjQR+93HnVCg5PDFygVEtHGExdV/M87rcsQ/Jv/ZFSh58dPugbr/r+RBiEriXEgRzLoO5/eDXoeVnXAp2KAdBtioaRZxyeZkiO5mi6oabGRr0wsApxXEHjE7KxoHHMFSHEER2fkCpJEmxB6AbFvOPwLMtSYfeRhqOZxHGCKk82FgToJMbhWxOTQS0IDls1JNuxHdhm2JgDhH6W70c4UNOgcUTNB+EIGhfjaePGMswzDmgf/m2Dw9QOX47CzAAHznyJdaKxiABnyAIcYRCb/CJND7vSHMelWDqioaa7v1bkKQIcuPZHBA7kWIBYC3GEnoj0tAXL/5iKPioWCB2nHOFAbWNXiHGgwGwgRDhaKZ62IAP8DOqwOHBITuCIw3b0XuZZT1sQHClGnOxNwwFchEOM/GqIA3veWhIHOYgbenQvreRzjjbDAL8ZDclC66jj4TzRd8RDfowj4Ed62oLM0WbAEVcuwvF9EJMHOI5xZjBqLATAoklX6dG27HkGjSMwfQKHiD3tyxgH3q1H1kE0r6KJMdqkVUd+ohfj8BPFQohDwMlkwjq6o8a0JVAQVKEhSNhY8DTC1RgHnmqI444wSmfHtCVQWLd+jCPIBaLk4CVEIMgMRjg68SklU4uL1Aff3RB83YCu5TXauXwJ7cEwJP6IwJGSLi24KByvPwgFAw2AXptNtIU7V6KP7oJ+dEqzbL0HhSOj+uMmW4qrFtcMlB1HhwsDj9LhACurgaDbvHslqV6PKbqLcIQIIxyWZdFBumXlO+cxQqsLgVaI/jLS5cvJEtjLtvgIYfQ1hkMPmF0n21OIedPqwhwWwhHFHaHC9A8h5GhXCISBCjKiHav3wxGfE4jNf7m5nmsZpTPCgaVIaB7OVN9t4ZRc6Sxx6AYCYRt5n5M8RWdqHXi+yTOMCgcSxGEB05BKjiNAItbEU3G4quE/OGrohQ3PsuEQj2tvRPFN7c0b4d+m+dvCjz/OwX9frTiOrJiu7jsWyVAlw/HQtpBOFikTDlH8WfjpzZufxJ9/Fv7jhjjmflxxXeCapuuno1XDUQ3bMxSr3Dj8TmNc3yGrQ0Ua2qqhe8Pi4vhjoN/flSqKrugu3hYyBIN6vBnpZnYcBEJCFpKmo20hh28gXCAMKzOOvT9F2iO/S4NyTLzN9c2lp+hmjGMvK47H8TnU4nvGEEqz0LaofcdeXLW3WXFQCAOxnYWZRwtJzpWaKj2Z+pZcCitrYyERBjKYv5zLAb6uJNYgMU1qUnKNxiHStRcpHCISxPE2BYfETI7nE8eYOVoax40anfqC1lFPZsOu0ueEX6omnrKWcrkaUjwlGTVlqpkTVRuAwcmHtO7v79+nCk5OTgapOBjl/HkwxUuNjQYkDrTqEa0mR+8nzyno0nuarlpW2kI1g82wZngJziZHqZvY91PFCYTFk2VbEEdq3/YgrNkvaC+Jo3s6jnGrmOZUEIeXCUei9r1eGo74nKLicFRJVfW0yOiXsGqP0F6i9p0On4bjl8LjwIt5Sb59mGgtK7RB7x7NBr3HJuoHErVv9xMFvrt4RFlU8YRxSEaw9J0NdLQyheLIluz8d/Z/v/76K6obGn8kcbRTcTygLKp4svz1ANNGEUTEPYjuEwtr32ql4YiHcDcnXI8zkqOghRFTczJExP0kiYOTGT6A8rN7ad9YAFlKuCh4UuSyxmsMjmTrQTiIFMnbtG8sgBCOET8qQOJItA2O7UxofsWMwtDwcmgM05cuIv+vEziajOdN4JhwLX6/wmfAXU3TgsZCr/5PJHPihwQDdcknjkMcROdbvLAjw03YUVA1SOBAdwbSYal/62SEo3i/y6EribuONZd5Bv9J6FgAHXWhO297TEncWopnHMD2mHvSLcbDDPagkJegY3JkCyygyJweFbUjzawEjnayNwlurN27CVXQVMe7KIGjBRK+poT3GZ+mRE8hg2ScOmU4aD8CyIVfsNIXYyyrunTlUVGzwhEIP9zVZIumRjSOLls0XTgoU/DdSK/CEeDooCLa904zDjxA6U8xDqph+A+VJwa5+Z5qPGPR1oEfhGxVOEgccoUjwOGvGs9NL44uW3Uax3R1pSk4QIWjwuGrl1L1acbBs1WnutfpGtFWOCh1UnB0Kxxk1an+ZLqSg+R4LUwT91LKpkTtlKp3Khy46h2/rJ9SNiUih6/hUjYVDgpHO6VsSkThCJYUbKeUTYnklKqnIZoSUTiCVcFaKWXTopSqpyGaFpFVDxJf04yDY3GkIZoWEcPXaJmjNETTIXklEN9skjiaTb94tTNVgUdvedHXzMO5aN3vJscvHMwEHyxf5OVNWp3lmVDrD8OG0V092IiKFy/0+iasdoxjZuNZUMjPkLrQ65uwZALHzPqcX3h9kSg8uNgLnLBIHDMbuLn0qLKHF32FZyVb16lHFty0n0JYJ6u+jLOl+2TZ4jPmlILKU2wah62ozEFku5hZx6uVNMiyxesTutpzF/tzcCa7buLMOBy3JnClExG7lpfMPlh7QOFYRUW3KByNCVzp5GQqgUas+/ZwDI6NhUle7blLG6JHJqVRTz6BZ2Td/cZSZhyuYZlQ+qg1I6+zOBolxmEaKtZwxOe3xuGYm+DFTkCSi6zDZZfq8UXVfX0bFS1skEX7E7zWCUhSdSh1JA6q7niMv19mHI6jW5au+Q9cm45pAUUBnuvoQHdMD/xGeRY2KvWdTXlk+T+JlrbQCxLVMpbxjOwKhYMfcWIxhVdqgBrlaOcoHDj1xVM4ynU3lDIMfjBvxBqJVMtYxnnzJlVUril8N4xKR6yAR3cUuKhD5UDKhUOT/LhDGtFYKDfip3paFI7S3A3l20M4l0QUkWqwmS86Q1YaR/vuA3w/L0rmT0s0wGd/e9Vl0j88lQhMaSwzy2WZw/cSq904ksTgoMb3oSVQGbKSJTxO1QKVKg0jUCpwL11cOlpzFI2ZmWC6nk6lB+Pc0qt9i6axvB1+spDgsVD+ievW3PIiTYNwqQ2ax8b6asmBtNbDyWqsjeUD6peqVzeWN6iPH5acx36D1BwzUuMXqAPKNbCtVKlSpUqVKlWqNEL/B63u/cDjdLXjAAAAAElFTkSuQmCC" type="image/png">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://thumbs.dreamstime.com/b/work-safety-items-construction-industry-gray-background-copy-space-150312825.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #333;
+        }
+
+        h1 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        canvas {
+            display: block;
+            border: 2px solid #ddd;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="file"], button {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            color: #fff;
+        }
+
+        input[type="file"] {
+            background-color: #007bff; /* Blue */
+        }
+
+        button {
+            background-color: #28a745; /* Green */
+        }
+
+        #captureButton {
+            background-color: #ffc107; /* Yellow */
+            color: #333;
+        }
+
+        #safety-status, #detected-classes {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 800px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #safety-status h2, #detected-classes h2 {
+            font-size: 18px;
+            margin: 0;
+            padding: 10px;
+            border-radius: 4px;
+            background-color: #f2f2f2;
+            color: #333;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Personal Protective Equipment Detection</h1>
+    <input id="uploadInput" type="file" accept="image/*"/>
+    <button id="webcamButton">Use Webcam</button>
+    <video id="webcam" autoplay playsinline style="display:none;"></video>
+    <button id="captureButton" style="display:none;">Capture Image</button>
+    <div id="safety-status"></div>
+    <canvas></canvas>
+    <div id="detected-classes"></div>
+    <script>
+        const uploadInput = document.getElementById("uploadInput");
+        const webcamButton = document.getElementById("webcamButton");
+        const webcam = document.getElementById("webcam");
+        const captureButton = document.getElementById("captureButton");
+
+        uploadInput.addEventListener("change", async (event) => {
+            const file = event.target.files[0];
+            if (!file) return;
+            processImage(file);
+        });
+
+        webcamButton.addEventListener("click", async () => {
+            if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+                navigator.mediaDevices.getUserMedia({ video: true }).then(stream => {
+                    webcam.srcObject = stream;
+                    webcam.style.display = "block";
+                    captureButton.style.display = "block";
+                }).catch(err => {
+                    console.error("Error accessing webcam: ", err);
+                });
+            }
+        });
+
+        captureButton.addEventListener("click", () => {
+            const canvas = document.querySelector("canvas");
+            canvas.width = webcam.videoWidth;
+            canvas.height = webcam.videoHeight;
+            const ctx = canvas.getContext("2d");
+            ctx.drawImage(webcam, 0, 0, canvas.width, canvas.height);
+            canvas.toBlob(blob => {
+                processImage(blob);
+            }, "image/jpeg");
+        });
+
+        async function processImage(file) {
+            const data = new FormData();
+            data.append("image_file", file);
+
+            try {
+                const response = await fetch("/detect", {
+                    method: "POST",
+                    body: data
+                });
+                const result = await response.json();
+
+                if (response.ok) {
+                    draw_image_and_boxes(file, result.boxes);
+                    display_detected_classes(result.boxes);
+                    display_safety_status(result.safety_status);
+                } else {
+                    alert(result.error);
+                }
+            } catch (error) {
+                console.error("Error:", error);
+                alert("An error occurred while processing the image.");
+            }
+        }
+
+        function draw_image_and_boxes(file, boxes) {
+            const img = new Image();
+            img.src = URL.createObjectURL(file);
+            img.onload = () => {
+                const canvas = document.querySelector("canvas");
+                canvas.width = img.width;
+                canvas.height = img.height;
+                const ctx = canvas.getContext("2d");
+                ctx.drawImage(img, 0, 0);
+                ctx.strokeStyle = "#00FF00";
+                ctx.lineWidth = 3;
+                ctx.font = "18px serif";
+
+                boxes.forEach(([x1, y1, x2, y2, label, prob]) => {
+                    ctx.strokeRect(x1, y1, x2 - x1, y2 - y1);
+                    ctx.fillStyle = "#00ff00";
+                    const text = `${label} (${prob})`;
+                    const textWidth = ctx.measureText(text).width;
+                    ctx.fillRect(x1, y1 - 22, textWidth + 10, 22);
+                    ctx.fillStyle = "#000000";
+                    ctx.fillText(text, x1, y1 - 5);
+                });
+            };
+        }
+
+        function display_detected_classes(boxes) {
+            const detectedClassesDiv = document.getElementById("detected-classes");
+            detectedClassesDiv.innerHTML = "<h2>Detected Classes:</h2>";
+
+            const table = document.createElement("table");
+            const thead = document.createElement("thead");
+            const tbody = document.createElement("tbody");
+
+            const headerRow = document.createElement("tr");
+            const headers = ["Class", "Probability"];
+            headers.forEach(headerText => {
+                const th = document.createElement("th");
+                th.textContent = headerText;
+                headerRow.appendChild(th);
+            });
+            thead.appendChild(headerRow);
+
+            boxes.forEach(([x1, y1, x2, y2, label, prob]) => {
+                const row = document.createElement("tr");
+                const classCell = document.createElement("td");
+                classCell.textContent = label;
+                const probCell = document.createElement("td");
+                probCell.textContent = prob;
+
+                row.appendChild(classCell);
+                row.appendChild(probCell);
+                tbody.appendChild(row);
+            });
+
+            table.appendChild(thead);
+            table.appendChild(tbody);
+            detectedClassesDiv.appendChild(table);
+        }
+
+        function display_safety_status(safety_status) {
+            const safetyStatusDiv = document.getElementById("safety-status");
+            safetyStatusDiv.innerHTML = `<h2>Safety Status: <span style="color: ${safety_status === "safe" ? "green" : "red"};">${safety_status.toUpperCase()}</span></h2>`;
+        }
+    </script>
+</body>
+</html>
