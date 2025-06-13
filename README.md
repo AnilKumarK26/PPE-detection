@@ -40,7 +40,7 @@ This project implements a **Personal Protective Equipment (PPE) Detection System
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/ppe-detection.git
+   git clone https://github.com/AnilKumarK26/PPE-detection.git
    cd ppe-detection
    ```
 
