@@ -1,28 +1,16 @@
 from ultralytics import YOLO
-from flask import request, Response, Flask
+from flask import request, Response, Flask, render_template
 from waitress import serve
 from PIL import Image
 import json
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static', template_folder='templates')
 
-model = YOLO("best.pt")
+model = YOLO("anil.pt")
 
 @app.route("/")
 def root():
-    try:
-        with open("index.html", encoding='utf-8') as file:
-            return file.read()
-    except FileNotFoundError:
-        return Response(
-            json.dumps({"error": "index.html not found"}), 
-            mimetype='application/json'
-        ), 404
-    except UnicodeDecodeError:
-        return Response(
-            json.dumps({"error": "Error reading HTML file - encoding issue"}), 
-            mimetype='application/json'
-        ), 500
+    return render_template("index.html")
 
 @app.route("/detect", methods=["POST"])
 def detect():
