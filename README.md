@@ -63,10 +63,9 @@ This project implements a **Personal Protective Equipment (PPE) Detection System
 
 ```
 .
-├── models/           # Pre-trained YOLO and Keras models
-├── data/             # Test and example image data
+├── templates/           
+├── model.pt             # Test and example image data
 ├── app.py            # Main application script
-├── requirements.txt  # Python dependencies
 └── README.md         # Project documentation
 ```
 
@@ -86,10 +85,6 @@ Contributions are welcome! Feel free to submit a pull request or report an issue
 
 ---
 
-## 📜 License
-This project is licensed under the MIT License. See the LICENSE file for details.
-
----
 
 ## ❤️ Acknowledgements
 Special thanks to all open-source contributors and the deep learning community for resources and inspiration.
@@ -97,5 +92,5 @@ Special thanks to all open-source contributors and the deep learning community f
 ---
 
 ## 📧 Contact
-For questions or support, reach out at your-email@example.com.
+For questions or support, reach out at anilkumarkedarsetty.com.
 
